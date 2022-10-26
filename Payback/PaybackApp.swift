@@ -8,13 +8,18 @@
 import SwiftUI
 
 @main
-struct PaybackApp: App {
+struct PayBackApp: App {
+    @AppStorage("isStartView") var isStartView: Bool = true
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if isStartView {
+                StartView()
+            } else {
+                ContentView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }

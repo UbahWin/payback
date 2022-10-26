@@ -7,22 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B764715A290932AB005A3125 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7647159290932AB005A3125 /* CellView.swift */; };
+		B791E3AA29080F95006421FB /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791E3A929080F95006421FB /* StartView.swift */; };
+		B791E3AC29081004006421FB /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B791E3AB29081004006421FB /* StartButtonView.swift */; };
 		B7D71E492906806A00234120 /* PaybackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E482906806A00234120 /* PaybackApp.swift */; };
 		B7D71E4B2906806A00234120 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E4A2906806A00234120 /* ContentView.swift */; };
 		B7D71E4D2906806B00234120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7D71E4C2906806B00234120 /* Assets.xcassets */; };
 		B7D71E502906806B00234120 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7D71E4F2906806B00234120 /* Preview Assets.xcassets */; };
 		B7D71E522906806B00234120 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E512906806B00234120 /* Persistence.swift */; };
 		B7D71E552906806B00234120 /* Payback.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E532906806B00234120 /* Payback.xcdatamodeld */; };
+		B7D71E5D2906811700234120 /* AddDutyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E5C2906811600234120 /* AddDutyView.swift */; };
+		B7D71E5F290681AB00234120 /* AboutDutyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E5E290681AB00234120 /* AboutDutyView.swift */; };
+		B7D71E612906825100234120 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E602906825100234120 /* Function.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7647159290932AB005A3125 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		B791E3A929080F95006421FB /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		B791E3AB29081004006421FB /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		B7D71E452906806A00234120 /* Payback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D71E482906806A00234120 /* PaybackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaybackApp.swift; sourceTree = "<group>"; };
-		B7D71E4A2906806A00234120 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B7D71E4A2906806A00234120 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
 		B7D71E4C2906806B00234120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7D71E4F2906806B00234120 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B7D71E512906806B00234120 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B7D71E542906806B00234120 /* Payback.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Payback.xcdatamodel; sourceTree = "<group>"; };
+		B7D71E5C2906811600234120 /* AddDutyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDutyView.swift; sourceTree = "<group>"; };
+		B7D71E5E290681AB00234120 /* AboutDutyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDutyView.swift; sourceTree = "<group>"; };
+		B7D71E602906825100234120 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B791E3AD2908130C006421FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7D71E512906806B00234120 /* Persistence.swift */,
+				B7D71E532906806B00234120 /* Payback.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B7D71E3C2906806A00234120 = {
 			isa = PBXGroup;
 			children = (
@@ -55,12 +76,12 @@
 		B7D71E472906806A00234120 /* Payback */ = {
 			isa = PBXGroup;
 			children = (
+				B791E3AD2908130C006421FB /* Model */,
+				B7D71E5B290680AD00234120 /* View */,
 				B7D71E482906806A00234120 /* PaybackApp.swift */,
-				B7D71E4A2906806A00234120 /* ContentView.swift */,
 				B7D71E4C2906806B00234120 /* Assets.xcassets */,
-				B7D71E512906806B00234120 /* Persistence.swift */,
-				B7D71E532906806B00234120 /* Payback.xcdatamodeld */,
 				B7D71E4E2906806B00234120 /* Preview Content */,
+				B7D71E602906825100234120 /* Function.swift */,
 			);
 			path = Payback;
 			sourceTree = "<group>";
@@ -71,6 +92,19 @@
 				B7D71E4F2906806B00234120 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B7D71E5B290680AD00234120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7D71E4A2906806A00234120 /* ContentView.swift */,
+				B7D71E5C2906811600234120 /* AddDutyView.swift */,
+				B7D71E5E290681AB00234120 /* AboutDutyView.swift */,
+				B791E3A929080F95006421FB /* StartView.swift */,
+				B791E3AB29081004006421FB /* StartButtonView.swift */,
+				B7647159290932AB005A3125 /* CellView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B791E3AC29081004006421FB /* StartButtonView.swift in Sources */,
+				B7D71E5F290681AB00234120 /* AboutDutyView.swift in Sources */,
+				B7D71E5D2906811700234120 /* AddDutyView.swift in Sources */,
+				B7D71E612906825100234120 /* Function.swift in Sources */,
+				B791E3AA29080F95006421FB /* StartView.swift in Sources */,
 				B7D71E522906806B00234120 /* Persistence.swift in Sources */,
+				B764715A290932AB005A3125 /* CellView.swift in Sources */,
 				B7D71E4B2906806A00234120 /* ContentView.swift in Sources */,
 				B7D71E492906806A00234120 /* PaybackApp.swift in Sources */,
 				B7D71E552906806B00234120 /* Payback.xcdatamodeld in Sources */,
