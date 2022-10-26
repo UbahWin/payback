@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isShowingAddDuty: Bool = false
-
+    
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -47,18 +47,33 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .navigationBarTitle("Payback", displayMode: .large)
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    EditButton()
+//                }
+//                ToolbarItem {
+//                    Button(action: addItem) {
+//                        Label("Add Item", systemImage: "plus")
+//                    }
+//                }
+//            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { isShowingAddDuty = true }) {
-                        Label("Add Item", systemImage: "plus")
+                        Label("" ,systemImage: "plus")
                     }
                     .sheet(isPresented: $isShowingAddDuty) {
                         AddDutyView()
                     }
                 }
+                ToolbarItem {
+                    Button(action: {
+//                        VideoView()
+                    }) {
+                        Label("Add Item", systemImage: "video")
+                    }
+                }
             }
-            Text("Select an item")
-            
         }
     }
 }

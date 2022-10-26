@@ -19,6 +19,7 @@
 		B7D71E5D2906811700234120 /* AddDutyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E5C2906811600234120 /* AddDutyView.swift */; };
 		B7D71E5F290681AB00234120 /* AboutDutyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E5E290681AB00234120 /* AboutDutyView.swift */; };
 		B7D71E612906825100234120 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D71E602906825100234120 /* Function.swift */; };
+		B7D934C82909A1E100357FAE /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D934C72909A1E100357FAE /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B7D71E5C2906811600234120 /* AddDutyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDutyView.swift; sourceTree = "<group>"; };
 		B7D71E5E290681AB00234120 /* AboutDutyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDutyView.swift; sourceTree = "<group>"; };
 		B7D71E602906825100234120 /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		B7D934C72909A1E100357FAE /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B791E3A929080F95006421FB /* StartView.swift */,
 				B791E3AB29081004006421FB /* StartButtonView.swift */,
 				B7647159290932AB005A3125 /* CellView.swift */,
+				B7D934C72909A1E100357FAE /* VideoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				B764715A290932AB005A3125 /* CellView.swift in Sources */,
 				B7D71E4B2906806A00234120 /* ContentView.swift in Sources */,
 				B7D71E492906806A00234120 /* PaybackApp.swift in Sources */,
+				B7D934C82909A1E100357FAE /* VideoView.swift in Sources */,
 				B7D71E552906806B00234120 /* Payback.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
