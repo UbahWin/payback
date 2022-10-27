@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct AboutDutyView: View {
-        
+    @State private var showActionSheet = false
+    
+    @Environment(\.managedObjectContext) private var viewContext
+
+    
     var duty: FetchedResults<Item>.Element
+    
+    
+    func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { ContentView().items[$0] }.forEach(viewContext.delete)
+            do {
+                try viewContext.save()
+            } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
     
     var body: some View {
         VStack {
@@ -41,6 +58,30 @@ struct AboutDutyView: View {
                 }
             }
             .navigationBarTitle(duty.name ?? "Каршеринг")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        showActionSheet = true
+                    }) {
+                        Image(systemName: "square.and.pencil")
+                    }
+                    .actionSheet(isPresented: $showActionSheet) {
+                        ActionSheet(title: Text("Действия"),
+                            buttons: [
+                                .cancel(Text("Отмена")),
+                                .default(
+                                    Text("Изменить")
+//                                        action: some
+                                        ),
+                                .destructive(
+                                    Text("Удалить")
+//                                    action: deleteItems
+                                )
+                            ]
+                        )
+                    }
+                }
+            }
         }
     }
 }

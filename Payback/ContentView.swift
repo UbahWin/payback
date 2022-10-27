@@ -25,8 +25,6 @@ struct ContentView: View {
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
@@ -44,7 +42,7 @@ struct ContentView: View {
                         CellView(duty: item)
                     }
                 }
-                .onDelete(perform: deleteItems)
+//                .onDelete(perform: deleteItems)
             }
             .navigationBarTitle("Payback", displayMode: .large)
 //            .toolbar {
@@ -60,19 +58,19 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { isShowingAddDuty = true }) {
-                        Label("" ,systemImage: "plus")
+                        Label("Добавить", systemImage: "plus")
                     }
                     .sheet(isPresented: $isShowingAddDuty) {
                         AddDutyView()
                     }
                 }
-                ToolbarItem {
-                    Button(action: {
+//                ToolbarItem {
+//                    Button(action: {
 //                        VideoView()
-                    }) {
-                        Label("Add Item", systemImage: "video")
-                    }
-                }
+//                    }) {
+//                        Label("", systemImage: "video")
+//                    }
+//                }
             }
         }
     }
