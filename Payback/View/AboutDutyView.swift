@@ -10,12 +10,9 @@ import SwiftUI
 struct AboutDutyView: View {
     @State private var showActionSheet = false
     
-    @Environment(\.managedObjectContext) private var viewContext
-
-    
     var duty: FetchedResults<Item>.Element
     
-    
+    @Environment(\.managedObjectContext) private var viewContext
     func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { ContentView().items[$0] }.forEach(viewContext.delete)
@@ -75,7 +72,7 @@ struct AboutDutyView: View {
                                         ),
                                 .destructive(
                                     Text("Удалить")
-//                                    action: deleteItems
+//                                    , action: deleteItems
                                 )
                             ]
                         )

@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isShowingAddDuty: Bool = false
+    @State private var isShowingVideo: Bool = false
+
     
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -19,17 +21,17 @@ struct ContentView: View {
     )
     var items: FetchedResults<Item>
 
-    func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
+//    func deleteItems(offsets: IndexSet) {
+//        withAnimation {
+//            offsets.map { items[$0] }.forEach(viewContext.delete)
+//            do {
+//                try viewContext.save()
+//            } catch {
+//                let nsError = error as NSError
+//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//            }
+//        }
+//    }
     
 
     var body: some View {
@@ -64,13 +66,16 @@ struct ContentView: View {
                         AddDutyView()
                     }
                 }
-//                ToolbarItem {
-//                    Button(action: {
-//                        VideoView()
-//                    }) {
-//                        Label("", systemImage: "video")
-//                    }
-//                }
+                ToolbarItem {
+                    Button(action: {
+                        isShowingVideo = true
+                    }) {
+                        Label("", systemImage: "video")
+                    }
+                    .sheet(isPresented: $isShowingVideo) {
+                        VideoView()
+                    }
+                }
             }
         }
     }

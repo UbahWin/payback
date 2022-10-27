@@ -9,9 +9,8 @@ import SwiftUI
 import AVKit
 
 struct VideoView: View {
-    @State var player = AVPlayer(url: Bundle.main.url(forResource: "zacarsh", withExtension: "mp4")!)
    var body: some View {
-           VideoPlayer(player: player)
-               .frame(width: 400, height: 300, alignment: .center)
-   }
+       VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "zacarsh", withExtension: "mp4")!))
+           .frame(height: 400)
+    }
 }
